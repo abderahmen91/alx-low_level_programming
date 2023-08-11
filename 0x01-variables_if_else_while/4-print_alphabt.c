@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - lower case except q and e
  * Return: 0 when success
 */
 int main(void)
@@ -9,7 +9,7 @@ int main(void)
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		if (letter != 'e' && letter != 'q')
+		if (letter != 'q' && letter != 'e')
 		putchar(letter);
 	}
 	putchar('\n');
