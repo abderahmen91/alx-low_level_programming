@@ -1,24 +1,26 @@
 #include <stdio.h>
 /**
- * main - Print all combinations of two digits numbers
+ * main - Prints all possible combinations of two different digits,
  *
- * Return: 0 when  Success
- */
+ * Return: 0 when success
+*/
 int main(void)
 {
-int dig1, dig2;
-for (dig1 = 0; dig1 < 8; dig1++)
-{
-for (dig2 = dig1 + 1; dig2 < 9; dig2++)
-{
-putchar('0' + dig1);
-putchar('0' + dig2);
+	int num1, num2;
 
-if (dig1 < 8)
-	putchar(',');
-	putchar(' ');
+	for (num1 = 0; num1 < 9; num1++)
+	{
+		for (num2 = num1 + 1; num2 < 10; num2++)
+		{
+		putchar(num1 + '0');
+		putchar(num2 + '0');
+		if (num1 == 8 && num2 == 9)
+			continue;
+		putchar(',');
+		putchar(' ');
+		}
+	}
+	putchar('\n');
 
-}
-}
-return (0);
+	return (0);
 }
